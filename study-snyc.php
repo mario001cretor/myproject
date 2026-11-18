@@ -31,4 +31,34 @@ if ($questions <=5) {
     elseif ($questions >=10 ) {
         echo $m;
     }
+    //...dates section
+$sql = "SELECT start_date FROM tasks";
+$result = $conn->query($sql);
+$input_type = array("text","date",);
+function getStartDate($start_date) {
+    return $start_date;
+}
+$sql = "SELECT due_date FROM tasks";
+$result = $conn->query($sql);
+$input_type = array("text","date",);
+function getDueDate($due_date) {
+    return $due_date;
+}
+//...status section
+$sql = "SELECT status FROM tasks";
+$result = $conn->query($sql);
+$s= "not started";
+$t= "in progress";
+$u= "completed";
+if ($status == 0) {
+    echo $s;     
+}
+    elseif ($status == 1) {
+    echo $t;
+}
+    elseif ($status == 2 ) {
+        echo $u;
+    }
+?> 
+
 ?> 
