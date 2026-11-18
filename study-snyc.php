@@ -1,5 +1,4 @@
-<?php
-require_once __DIR__ . '/connection.php';
+<?php;
 //...users section
 $sql = "SELECT id, name FROM users";
 $result = $conn->query($sql);
