@@ -1,4 +1,5 @@
 <?php;
+include 'connection.php';
 //...users section
 $sql = "SELECT id, name FROM users";
 $result = $conn->query($sql);
