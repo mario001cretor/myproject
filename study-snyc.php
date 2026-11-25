@@ -10,6 +10,16 @@ if ($result->num_rows > 0) {
 } else { 
     echo "register: 0 results";
 }
+//...password section
+$sql = "SELECT password FROM users";
+$result = $conn->query($sql);
+if ($result->num_rows > 0) {
+    while($row = $result->fetch_assoc()) {
+        echo "password: " . $row["password"]."<br>";
+        }
+} else { 
+    echo "register: 0 results";
+}
 //...task section
 $sql = "SELECT * FROM tasks";
 $result = $conn->query($sql);
